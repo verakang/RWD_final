@@ -690,6 +690,11 @@ footer .container .connect li {
   margin-left: 20px;
 }
 
+footer .container .connect li a {
+  text-decoration: none;
+  color: #3D1101;
+}
+
 footer .container .sns {
   width: 33.33%;
   display: -webkit-box;
