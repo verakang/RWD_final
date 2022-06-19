@@ -1028,6 +1028,7 @@ footer .container .sns .facebook {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 0;
   }
   .order .container .order-content .content-top input {
     width: 100%;
