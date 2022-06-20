@@ -1006,7 +1006,7 @@ footer .container .sns .facebook {
   top: 64px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .order .container {
     display: -webkit-box;
     display: -ms-flexbox;
