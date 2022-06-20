@@ -956,6 +956,10 @@ footer .container .sns .facebook {
   left: 10px;
 }
 
+.order .container .order-content .product-list .product-item .like:hover {
+  cursor: pointer;
+}
+
 .order .container .order-content .product-list .product-item .ribbon {
   position: absolute;
   top: -5px;
