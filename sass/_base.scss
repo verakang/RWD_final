@@ -11,7 +11,6 @@ $size-l: 36px;
 *::before,
 *::after {
     box-sizing: border-box;
-    // outline: 1px solid pink;
 }
 
 h2,
@@ -99,15 +98,13 @@ nav {
             align-items: flex-start;
 
             .navbar {
-                display: none;
-                flex-direction: column;
-                align-self: center;
+                display: block;
                 margin-top: 20px;
 
                 li {
                     a {
                         font-size: 18px;
-                        padding: 6px 120px;
+                        padding: 6px;
                         display: block;
                     }
                 }
@@ -206,9 +203,7 @@ nav {
 
         .feature-item {
             width: 33.33%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
             padding: 5px 30px;
 
             img {
@@ -220,6 +215,10 @@ nav {
             .item-title {
                 font-size: 18px;
                 margin-bottom: 12px;
+            }
+
+            p {
+                text-align: left;
             }
         }
     }
@@ -398,10 +397,6 @@ nav {
                     font-size: 14px;
                     padding-right: 36px;
 
-                    p {
-                        font-size: 14px;
-                    }
-
                     .input-set {
                         width: 100%;
                         margin-top: 6px;
@@ -421,20 +416,16 @@ nav {
                 .btns {
                     align-self: end;
 
-
-                    .btn {
+                    a {
                         border-radius: 5px;
-                        width: 70px;
+                        width: 80px;
                         border: none;
-
-                        a {
-                            display: block;
-                            padding: 6px;
-                            font-size: 14px;
-                            text-decoration: none;
-                            color: $bs-color;
-
-                        }
+                        display: inline-block;
+                        padding: 8px;
+                        font-size: 14px;
+                        text-decoration: none;
+                        text-align: center;
+                        color: $bs-color;
                     }
 
                     .btn-cancle {
@@ -519,9 +510,7 @@ footer {
 
         .sns {
             width: 33.33%;
-            display: flex;
-            flex-direction: column;
-            align-items: end;
+            text-align: end;
 
             div {
                 display: flex;
@@ -647,6 +636,7 @@ footer {
 
                     &:hover {
                         cursor: pointer;
+                        color: lighten($main-color, 60%);
                     }
                 }
 
@@ -658,6 +648,10 @@ footer {
                         line-height: 32px;
                         color: $main-color;
                         text-decoration: none;
+
+                        &:hover {
+                            color: lighten($main-color, 30%);
+                        }
                     }
 
                     .check {
@@ -708,14 +702,13 @@ footer {
                     img {
                         width: 100%;
                         height: 120px;
+                        object-fit: cover;
                     }
 
                     .item-title {
-                        h3 {
-                            font-size: 20px;
-                        }
+                        font-size: 20px;
 
-                        p {
+                        span {
                             font-size: 12px;
                             margin-bottom: 20px;
 
@@ -894,12 +887,14 @@ footer {
     background-color: $bg-color;
 
     .container {
-        width: 330px;
+        max-width: 330px;
         padding: 50px 15px;
 
         .login-title {
+            font-family: Noto Sans;
             font-size: 48px;
             text-align: center;
+            font-weight: bold;
 
             +p {
                 text-align: center;
@@ -916,15 +911,12 @@ footer {
             h4 {
                 font-size: 18px;
                 margin-top: 15px;
+                margin-bottom: 20px;
                 text-align: center;
                 font-weight: bold;
             }
 
             .login-mail {
-                p {
-                    margin-top: 16px;
-                }
-
                 .email-input {
                     position: relative;
 
@@ -932,6 +924,8 @@ footer {
                         width: 100%;
                         border: 1px solid #CCCCCC;
                         padding: 10px;
+                        padding-left: 30px;
+                        margin-bottom: 15px;
                         border-radius: 5px;
                     }
 
@@ -946,9 +940,7 @@ footer {
             }
 
             .login-password {
-                p {
-                    margin-top: 16px;
-                }
+                margin-top: 16px;
 
                 .password-input {
                     position: relative;
@@ -957,6 +949,7 @@ footer {
                         width: 100%;
                         border: 1px solid #CCCCCC;
                         padding: 10px;
+                        padding-left: 30px;
                         border-radius: 5px;
                     }
 
@@ -997,13 +990,10 @@ footer {
                     padding: 3px;
                     border: none;
                     border-radius: 5px;
-
-                    a {
-                        padding: 5px 45px;
-                        font-size: 14px;
-                        text-decoration: none;
-                        color: $bs-color;
-                    }
+                    padding: 5px 45px;
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: $bs-color;
                 }
 
                 .btn-regist {
@@ -1036,8 +1026,10 @@ footer {
         padding: 50px 15px;
 
         .regist-title {
+            font-family: Noto Sans;
             font-size: 48px;
             text-align: center;
+            font-weight: bold;
 
             +p {
                 text-align: center;
@@ -1056,6 +1048,7 @@ footer {
                 margin-top: 15px;
                 text-align: center;
                 font-weight: bold;
+                margin-bottom: 20px;
             }
 
             div {
@@ -1073,10 +1066,6 @@ footer {
 
 
                     .regist-mail {
-                        p {
-                            margin-top: 16px;
-                        }
-
                         .email-input {
                             position: relative;
 
@@ -1084,6 +1073,7 @@ footer {
                                 width: 100%;
                                 border: 1px solid #CCCCCC;
                                 padding: 10px;
+                                padding-left: 30px;
                                 border-radius: 5px;
                             }
 
@@ -1094,13 +1084,10 @@ footer {
                                 color: rgba(#3D1101, 0.5);
                             }
                         }
-
                     }
 
                     .regist-password {
-                        p {
-                            margin-top: 16px;
-                        }
+                        margin-top: 15px;
 
                         .password-input {
                             display: flex;
@@ -1111,6 +1098,7 @@ footer {
                                 width: 100%;
                                 border: 1px solid #CCCCCC;
                                 padding: 10px;
+                                padding-left: 30px;
                                 border-radius: 5px;
                             }
 
@@ -1150,13 +1138,11 @@ footer {
                         padding: 3px;
                         border: none;
                         border-radius: 5px;
-
-                        a {
-                            padding: 5px 20px;
-                            font-size: 14px;
-                            text-decoration: none;
-                            color: $bs-color;
-                        }
+                        padding: 5px 20px;
+                        font-size: 14px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: $bs-color;
                     }
 
                     .btn-regist {
@@ -1166,10 +1152,38 @@ footer {
                             background-color: #f78f56;
                         }
                     }
-
                 }
             }
         }
+    }
+}
 
+@media (max-width:767px) {
+    .regist {
+        .container {
+            form {
+                div {
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    .notice {
+                        width: 90%;
+                        margin: 0 auto;
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                    }
+
+                    .content {
+                        width: 90%;
+                        margin: 0 auto;
+                        padding-left: 0;
+
+                        .btn {
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

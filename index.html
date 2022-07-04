@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oh! burger</title>
     <link rel="icon" href="img/favicon.ico">
+    <meta name="description" content="六角西餐廳">
+    <meta name="keyword" content="六角西餐廳, 六角, 西餐廳">
+    <meta property="og:title" content="各種漢堡任你挑選 ｜ 六角西餐廳" />
+    <meta property="og:description" content="種類最豐富的美式漢堡都在這裡！" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,14 +45,14 @@
             <ul class="feature-list">
                 <li class="feature-item">
                     <img src="img/feature_1.png" alt="圖片：台灣本土蔬菜">
-                    <div class="item-title">台灣本土蔬菜</div>
+                    <h4 class="item-title">台灣本土蔬菜</h4>
                     <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et
                         elit
                         eget elit facilisis tristique. Nam vel iaculis mauris.</p>
                 </li>
                 <li class="feature-item">
                     <img src="img/feature_2.png" alt="圖片：專業米其林廚師">
-                    <div class="item-title">專業米其林廚師</div>
+                    <h4 class="item-title">專業米其林廚師</h4>
                     <p>Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit,
                         eu
                         bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.
@@ -53,7 +60,7 @@
                 </li>
                 <li class="feature-item">
                     <img src="img/feature_3.png" alt="圖片：對於專業不能退讓">
-                    <div class="item-title">對於專業不能退讓</div>
+                    <h4 class="item-title">對於專業不能退讓</h4>
                     <p>Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh
                         quis,
                         facilisis accumsan turpis.</p>
@@ -121,19 +128,19 @@
                 <form action="#">
                     <div>
                         <label for="name">
-                            <p>姓名</p>
+                            姓名
                             <input class="input-set" type="text" name="name" id="name" placeholder="六角講師吃尾牙">
                         </label>
                         <label for="phone">
-                            <p>電話</p>
-                            <input class="input-set" type="number" name="phone" id="phone" placeholder="02-1234567">
+                            電話
+                            <input class="input-set" type="tel" name="phone" id="phone" placeholder="02-1234567">
                         </label>
                         <label for="email">
-                            <p>信箱</p>
+                            信箱
                             <input class="input-set" type="email" name="email" id="email" placeholder="test@gmail.com">
                         </label>
                         <label for="number">
-                            <p>人數</p>
+                            人數
                             <input class="input-set" type="number" name="number" id="number">
                         </label>
                         <p class="radio-item">是否需要素食</p>
@@ -141,8 +148,8 @@
                         <label for="no">否<input type="radio" name="vegan" id="no" value="no"></label>
                     </div>
                     <div class="btns">
-                        <button class="btn btn-cancle"><a href="#">取消</a></button>
-                        <button class="btn btn-submit"><a href="#">送出</a></button>
+                        <a href="#" class="btn btn-cancle">取消</a>
+                        <a href="#" class="btn btn-submit">送出</a>
                     </div>
 
                 </form>

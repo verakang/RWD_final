@@ -238,19 +238,12 @@ nav .container .navbar-phone {
             align-items: flex-start;
   }
   nav .container .navbar {
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    display: block;
     margin-top: 20px;
   }
   nav .container .navbar li a {
     font-size: 18px;
-    padding: 6px 120px;
+    padding: 6px;
     display: block;
   }
   nav .container .navbar-show {
@@ -358,16 +351,7 @@ nav .container .navbar-phone {
 
 .feature .feature-list .feature-item {
   width: 33.33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
   padding: 5px 30px;
 }
 
@@ -380,6 +364,10 @@ nav .container .navbar-phone {
 .feature .feature-list .feature-item .item-title {
   font-size: 18px;
   margin-bottom: 12px;
+}
+
+.feature .feature-list .feature-item p {
+  text-align: left;
 }
 
 @media (max-width: 767px) {
@@ -578,10 +566,6 @@ nav .container .navbar-phone {
   padding-right: 36px;
 }
 
-.booking .container .booking-content form label p {
-  font-size: 14px;
-}
-
 .booking .container .booking-content form label .input-set {
   width: 100%;
   margin-top: 6px;
@@ -603,17 +587,15 @@ nav .container .navbar-phone {
       align-self: end;
 }
 
-.booking .container .booking-content form .btns .btn {
+.booking .container .booking-content form .btns a {
   border-radius: 5px;
-  width: 70px;
+  width: 80px;
   border: none;
-}
-
-.booking .container .booking-content form .btns .btn a {
-  display: block;
-  padding: 6px;
+  display: inline-block;
+  padding: 8px;
   font-size: 14px;
   text-decoration: none;
+  text-align: center;
   color: #fff;
 }
 
@@ -697,16 +679,7 @@ footer .container .connect li a {
 
 footer .container .sns {
   width: 33.33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  text-align: end;
 }
 
 footer .container .sns div {
@@ -842,6 +815,7 @@ footer .container .sns .facebook {
 
 .order .container .order-content .content-top .search:hover {
   cursor: pointer;
+  color: #fd9873;
 }
 
 .order .container .order-content .content-top div {
@@ -853,6 +827,10 @@ footer .container .sns .facebook {
   line-height: 32px;
   color: #3D1101;
   text-decoration: none;
+}
+
+.order .container .order-content .content-top div a:hover {
+  color: #d43b03;
 }
 
 .order .container .order-content .content-top div .check::after {
@@ -904,18 +882,20 @@ footer .container .sns .facebook {
 .order .container .order-content .product-list .product-item img {
   width: 100%;
   height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.order .container .order-content .product-list .product-item .item-title h3 {
+.order .container .order-content .product-list .product-item .item-title {
   font-size: 20px;
 }
 
-.order .container .order-content .product-list .product-item .item-title p {
+.order .container .order-content .product-list .product-item .item-title span {
   font-size: 12px;
   margin-bottom: 20px;
 }
 
-.order .container .order-content .product-list .product-item .item-title p:after {
+.order .container .order-content .product-list .product-item .item-title span:after {
   content: "";
   width: 90px;
   height: 1px;
@@ -1082,13 +1062,15 @@ footer .container .sns .facebook {
 }
 
 .login .container {
-  width: 330px;
+  max-width: 330px;
   padding: 50px 15px;
 }
 
 .login .container .login-title {
+  font-family: Noto Sans;
   font-size: 48px;
   text-align: center;
+  font-weight: bold;
 }
 
 .login .container .login-title + p {
@@ -1107,12 +1089,9 @@ footer .container .sns .facebook {
 .login .container form h4 {
   font-size: 18px;
   margin-top: 15px;
+  margin-bottom: 20px;
   text-align: center;
   font-weight: bold;
-}
-
-.login .container form .login-mail p {
-  margin-top: 16px;
 }
 
 .login .container form .login-mail .email-input {
@@ -1123,6 +1102,8 @@ footer .container .sns .facebook {
   width: 100%;
   border: 1px solid #CCCCCC;
   padding: 10px;
+  padding-left: 30px;
+  margin-bottom: 15px;
   border-radius: 5px;
 }
 
@@ -1133,7 +1114,7 @@ footer .container .sns .facebook {
   color: rgba(61, 17, 1, 0.5);
 }
 
-.login .container form .login-password p {
+.login .container form .login-password {
   margin-top: 16px;
 }
 
@@ -1145,6 +1126,7 @@ footer .container .sns .facebook {
   width: 100%;
   border: 1px solid #CCCCCC;
   padding: 10px;
+  padding-left: 30px;
   border-radius: 5px;
 }
 
@@ -1188,9 +1170,6 @@ footer .container .sns .facebook {
   padding: 3px;
   border: none;
   border-radius: 5px;
-}
-
-.login .container form .btns .btn a {
   padding: 5px 45px;
   font-size: 14px;
   text-decoration: none;
@@ -1223,8 +1202,10 @@ footer .container .sns .facebook {
 }
 
 .regist .container .regist-title {
+  font-family: Noto Sans;
   font-size: 48px;
   text-align: center;
+  font-weight: bold;
 }
 
 .regist .container .regist-title + p {
@@ -1245,6 +1226,7 @@ footer .container .sns .facebook {
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .regist .container form div {
@@ -1269,10 +1251,6 @@ footer .container .sns .facebook {
   padding-left: 10px;
 }
 
-.regist .container form div .content .regist-mail p {
-  margin-top: 16px;
-}
-
 .regist .container form div .content .regist-mail .email-input {
   position: relative;
 }
@@ -1281,6 +1259,7 @@ footer .container .sns .facebook {
   width: 100%;
   border: 1px solid #CCCCCC;
   padding: 10px;
+  padding-left: 30px;
   border-radius: 5px;
 }
 
@@ -1291,8 +1270,8 @@ footer .container .sns .facebook {
   color: rgba(61, 17, 1, 0.5);
 }
 
-.regist .container form div .content .regist-password p {
-  margin-top: 16px;
+.regist .container form div .content .regist-password {
+  margin-top: 15px;
 }
 
 .regist .container form div .content .regist-password .password-input {
@@ -1310,6 +1289,7 @@ footer .container .sns .facebook {
   width: 100%;
   border: 1px solid #CCCCCC;
   padding: 10px;
+  padding-left: 30px;
   border-radius: 5px;
 }
 
@@ -1346,11 +1326,9 @@ footer .container .sns .facebook {
   padding: 3px;
   border: none;
   border-radius: 5px;
-}
-
-.regist .container form div .content .btn a {
   padding: 5px 20px;
   font-size: 14px;
+  text-align: center;
   text-decoration: none;
   color: #fff;
 }
@@ -1361,5 +1339,31 @@ footer .container .sns .facebook {
 
 .regist .container form div .content .btn-regist:hover {
   background-color: #f78f56;
+}
+
+@media (max-width: 767px) {
+  .regist .container form div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .regist .container form div .notice {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .regist .container form div .content {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .regist .container form div .content .btn {
+    width: 25%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
